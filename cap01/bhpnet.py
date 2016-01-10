@@ -90,9 +90,9 @@ def client_handler(client_socket):
             while '\n' not in cmd_buffer:
                 cmd_buffer += client_socket.recv(1024)
 
-            response = run_command(cmd_buffer)
+                response = run_command(cmd_buffer)
 
-            client_socket.send(response)
+                client_socket.send(response)
 
 
 def server_loop():
@@ -183,7 +183,7 @@ def main():
         else:
             assert False, 'Unhandled Option'
 
-    if not listen and len(target and port > 0):
+    if not listen and len(target) and port > 0:
         buffer = sys.stdin.read()
 
         client_sender(buffer)
