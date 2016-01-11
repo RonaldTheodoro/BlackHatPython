@@ -15,10 +15,3 @@ def ssh_command(ip, user, passwd, command):
         print ssh_session.recv(1024)
 
     return
-
-ip = raw_input('Digite o Ip: ')
-user = raw_input('Digite o usuario: ')
-passwd = raw_input('Digite a senha do usuario %s: ' % user)
-command = raw_input('Digite o comando: ')
-
-ssh_command(ip, user, passwd, command)
